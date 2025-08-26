@@ -14,7 +14,7 @@ CHUNK_OVERLAP = 80
 SIMILARITY_SEARCH_K = 5
 
 # Model settings
-OLLAMA_MODEL = "mistral"
+OLLAMA_MODEL = "gpt-oss:20b"
 EMBEDDING_MODEL = "nomic-embed-text"
 
 # AWS Bedrock settings (if using Bedrock)
