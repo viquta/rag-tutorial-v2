@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS-StuBA Document Intelligence System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a472a, #2c5530);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #f1c40f, #d4af37);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-left: 5px solid;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card.problem { border-left-color: #c0392b; }
+        .card.solution { border-left-color: #2d8659; }
+        .card.process { border-left-color: #d68910; }
+        .card.value { border-left-color: #1b4f72; }
+        .card.tech { border-left-color: #7d3c98; }
+        .card.roadmap { border-left-color: #a04000; }
+        
+        .card-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .emoji {
+            font-size: 1.5em;
+        }
+        
+        .highlight {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #d68910;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 15px;
+            background: #F8F9FA;
+            border-radius: 8px;
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #2C3E50;
+        }
+        
+        .metric-label {
+            font-size: 0.9em;
+            color: #7F8C8D;
+            margin-top: 5px;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .step {
+            text-align: center;
+            flex: 1;
+            padding: 15px 10px;
+        }
+        
+        .step-number {
+            background: #2c5530;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-weight: 700;
+            border: 2px solid #d68910;
+        }
+        
+        .footer {
+            background: #1a472a;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 3px solid #d68910;
+        }
+        
+        .contact-info {
+            font-size: 0.9em;
+        }
+        
+        .status-badge {
+            background: #2d8659;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2d8659;
+            font-weight: bold;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌱 GS-StuBA Document AI</h1>
+            <p>Intelligent Document Management System</p>
+        </div>
+        
+        <div class="content">
+            <div class="card problem">
+                <div class="card-title">
+                    <span class="emoji">🎯</span>
+                    <span>CHALLENGE</span>
+                </div>
+                <p><strong>Problem:</strong> Complex remediation projects require quick access to extensive documentation and guidelines from various departments.</p>
+                
+                <div class="highlight">
+                    <strong>Current Situation:</strong>
+                    <ul>
+                        <li>Time-consuming searches in technical guidelines</li>
+                        <li>Distributed knowledge across different departments</li>
+                        <li>Complex approval processes</li>
+                        <li>Delays in decision-making</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card solution">
+                <div class="card-title">
+                    <span class="emoji">💡</span>
+                    <span>OUR SOLUTION</span>
+                </div>
+                <p><strong>AI-powered Document Analysis (RAG)</strong> - A system that instantly answers natural language queries refering to specific remediation documents.</p>
+                
+                <div style="margin-top: 15px;">
+                    <strong>Core Features:</strong>
+                    <ul>
+                        <li>Ask questions in natural language</li>
+                        <li>Precise answers with source citations</li>
+                        <li>Integration of existing PDF documentation</li>
+                        <li>Local installation (GDPR compliant)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card process full-width">
+                <div class="card-title">
+                    <span class="emoji">🔧</span>
+                    <span>HOW IT WORKS</span>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div><strong>📄 Document Upload</strong></div>
+                        <div style="font-size: 0.9em; color: #7F8C8D; margin-top: 5px;">Load remediation guidelines</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div><strong>🧠 AI Analysis</strong></div>
+                        <div style="font-size: 0.9em; color: #7F8C8D; margin-top: 5px;">System indexes content</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div><strong>❓ Ask Questions</strong></div>
+                        <div style="font-size: 0.9em; color: #7F8C8D; margin-top: 5px;">Technical queries</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div><strong>💬 Get Answers</strong></div>
+                        <div style="font-size: 0.9em; color: #7F8C8D; margin-top: 5px;">Instant, precise results</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card value">
+                <div class="card-title">
+                    <span class="emoji">📊</span>
+                    <span>VALUE PROPOSITION</span>
+                </div>
+                
+                <div class="highlight">
+                    <strong>Key Benefits:</strong>
+                    <ul>
+                        <li><strong>Significant Time Savings:</strong> Instant answers vs. manual document searching</li>
+                        <li><strong>Enhanced Accuracy:</strong> RAG technology reduces AI hallucinations by grounding responses in actual documents</li>
+                        <li><strong>Consistent Results:</strong> Same query always references the same source material</li>
+                        <li><strong>Source Transparency:</strong> Every answer includes document citations for verification</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <strong>Use Cases:</strong>
+                    <ul>
+                        <li>Remediation guidelines & procedures</li>
+                        <li>Environmental law regulations</li>
+                        <li>Project documentation</li>
+                        <li>Technical specifications</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card tech">
+                <div class="card-title">
+                    <span class="emoji">🛠️</span>
+                    <span>TECHNICAL FOUNDATION</span>
+                </div>
+                <p><strong>Modern AI Technology:</strong></p>
+                <ul>
+                    <li>LangChain for document processing</li>
+                    <li>ChromaDB for intelligent search</li>
+                    <li>Ollama for local AI models</li>
+                    <li>Automated testing & validation</li>
+                </ul>
+                
+                <div class="highlight" style="margin-top: 15px;">
+                    <strong>Deployment Option:</strong><br>
+                    🖥️ Local Installation
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="contact-info">
+                <strong>Developed for:</strong> GS-StuBA<br>
+                <strong>Date:</strong> August 27, 2025<br>
+                <strong>Contact:</strong> digitalisierung@gs-stuba.net
+            </div>
+            <div class="status-badge">
+                ✅ Ready for Use
+            </div>
+        </div>
+    </div>
+</body>
+</html>
