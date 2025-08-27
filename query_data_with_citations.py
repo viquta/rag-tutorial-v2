@@ -5,6 +5,7 @@ from langchain_community.llms.ollama import Ollama
 import re
 
 from get_embedding_function import get_embedding_function
+from config import OLLAMA_MODEL
 
 CHROMA_PATH = "chroma"
 
@@ -88,7 +89,7 @@ def query_rag_with_citations(query_text: str):
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=context_text, question=query_text)
     
-    model = Ollama(model="mistral")
+    model = Ollama(model=OLLAMA_MODEL)
     response_text = model.invoke(prompt)
     
     # Format final response with source summary
@@ -144,7 +145,7 @@ def query_rag_with_inline_citations(query_text: str):
     
     Answer:"""
     
-    model = Ollama(model="mistral")
+    model = Ollama(model=OLLAMA_MODEL)
     response_text = model.invoke(inline_prompt)
     
     # Add bibliography

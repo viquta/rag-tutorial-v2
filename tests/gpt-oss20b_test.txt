@@ -1,0 +1,22 @@
+(.venv) victorhristov@Victors-Mac-Studio rag-tutorial-v2 % python query_data.py "What is Task 1 about?"                                
+Response: Task 1 is the “Presentation for a Company‑Internal Product or Process Innovation Competition.”  
+In this task you are to imagine yourself as an intern at a company of your choice and take part in that company’s internal competition for new product or process innovations. The deliverable is a one‑page presentation that can be fully textual, fully visual, or a mix of both. In the presentation you must:
+
+1. Briefly introduce the company you’ve chosen and the industry/field in which it operates.  
+2. State the specific topic (product idea or process improvement) you are submitting for the competition.  
+3. Explain how you used generative artificial intelligence (AI) tools to refine or develop your innovation idea.  
+
+These requirements are specified directly on page 2 of the task PDF, and the overall task outline appears in the document’s table of contents on page 1.  
+
+[Source: Task_Oral Project Report_DLBPKIEKPT01_E.pdf, Page: 2]  
+[Source: Task_Oral Project Report_DLBPKIEKPT01_E.pdf, Page: 1]
+
+Sources used: Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 1), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 2), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 0), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 1), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 3)
+(.venv) victorhristov@Victors-Mac-Studio rag-tutorial-v2 % python query_data.py "what kind of unicorn do i need to present in task 14?"
+Response: The provided context does **not** mention any “task 14” nor does it describe a unicorn‐related requirement for any of the outlined tasks. The document only lists the first three tasks (Task 1, Task 2, and Task 3) and contains no reference to a unicorn or a “task 14”. Therefore, based on this context, there is no information available about what kind of unicorn you would need to present in task 14.  
+
+[Source: Task_Oral Project Report_DLBPKIEKPT01_E.pdf, Page: 0]  
+[Source: Task_Oral Project Report_DLBPKIEKPT01_E.pdf, Page: 1]  
+[Source: Task_Oral Project Report_DLBPKIEKPT01_E.pdf, Page: 2]
+
+Sources used: Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 1), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 2), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 2), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 0), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 2)

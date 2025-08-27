@@ -11,6 +11,15 @@ A Retrieval-Augmented Generation (RAG) system that enables querying PDF document
 
 ## Setup
 
+### Option 1: Quick Setup (Recommended)
+Run the automated setup script:
+```bash
+chmod +x setup_ollama.sh
+./setup_ollama.sh
+```
+
+### Option 2: Manual Setup
+
 1. Install dependencies:
 ```bash
 pip install -r requirements.txt
@@ -24,20 +33,22 @@ ollama pull mistral
 ollama pull nomic-embed-text
 ```
 
-3. Configure embeddings:
-   - For AWS Bedrock: Set up AWS credentials
-   - For local Ollama: Uncomment the Ollama embeddings in `get_embedding_function.py`
-
-## Usage
-
-1. Populate the database with PDF documents:
+3. Populate the database with PDF documents:
 ```bash
 python populate_database.py
 ```
 
-2. Query the system:
+## Usage
+
+1. Query the system:
 ```bash
 python query_data.py "Your question here"
+```
+
+2. Example queries:
+```bash
+python query_data.py "What are the rules of Monopoly?"
+python query_data.py "How do you win at Ticket to Ride?"
 ```
 
 3. Run tests:

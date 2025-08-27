@@ -1,0 +1,11 @@
+(.venv) victorhristov@Victors-Mac-Studio rag-tutorial-v2 % python query_data.py "What is Task 1 about?"                                   
+Response:  Task 1, as detailed in the context, is about presenting a company-internal product or process innovation competition submission [Source: Task_Oral Project Report_DLBPKIEKPT01_E.pdf, Page: 2]. In this task, participants are expected to act as interns at a chosen company and propose an innovative idea for a new product or process, which can be presented entirely textually, entirely visually, or as a blend of both. The use of generative artificial intelligence (AI) is encouraged in refining the innovation idea [Source: Task_Oral Project Report_DLBPKIEKPT01_E.pdf, Page: 2].
+
+Sources used: Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 1), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 2), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 0), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 1), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 3)
+(.venv) victorhristov@Victors-Mac-Studio rag-tutorial-v2 % python query_data.py "what kind of unicorn do i need to present in task 14?"
+Response:  The context provided does not mention any task 14. The tasks mentioned are Task 1 (Presentation for a Company-Internal Product or Process Innovation Competition) and Task 2 (Improving Customer Communication). Therefore, there is no information about the kind of unicorn needed for task 14 in the provided context.
+
+Reference(s):
+[Source: Task_Oral Project Report_DLBPKIEKPT01_E.pdf, Page: 2-4]
+
+Sources used: Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 1), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 2), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 2), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 0), Task_Oral Project Report_DLBPKIEKPT01_E.pdf (Page 2)
