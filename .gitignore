@@ -2,3 +2,6 @@
 .DS_Store
 backup
 chroma
+
+# Private folder - do not commit
+private_folder/
